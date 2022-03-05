@@ -1,12 +1,12 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-FROM ppc64le/mono:3.10-onbuild
-CMD [ "mono",  "./TestingConsoleApp.exe" ]
+FROM mono:3.10-onbuild
+
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM ppc64le/mono:3.10-onbuild
-CMD [ "mono",  "./TestingConsoleApp.exe" ]
+FROM mono:3.10-onbuild
+
 WORKDIR /src
 COPY ["SensoStatBO/SensoStatBO.csproj", "SensoStatBO/"]
 RUN dotnet restore "SensoStatBO/SensoStatBO.csproj"
