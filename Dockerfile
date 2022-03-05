@@ -4,7 +4,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
+FROM alpine AS build
 WORKDIR /src
 COPY ["SensoStatBO/SensoStatBO.csproj", "SensoStatBO/"]
 RUN dotnet restore "SensoStatBO/SensoStatBO.csproj"
