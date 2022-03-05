@@ -1,0 +1,51 @@
+﻿/*Here we list all different componement*/
+
+
+/* === roundedOrangeInput === */
+.roundedOrangeInput {
+    border: 2px solid #FF9D0A;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 20px;
+    width: 100%;
+}
+
+.roundedOrangeInput input {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%;
+}
+
+.roundedOrangeInput input:focus {
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+/* ========================== */
+
+
+/* === roundedOrangeButton === */
+.orangeRoundedButton {
+    background-color: #FF930C;
+    border-radius: 10px;
+    padding: 15px 50px;
+    color: white;
+    border: none;
+    text-align:center;
+}
+
+.orangeRoundedButton:hover {
+    cursor: pointer;
+    background-color: #DE792C;
+}
+
+/* ========================== */
+
+/* === error messages for ModelStates === */
+.errorText {
+    color:red;
+}
+/* ========================== */
+
+

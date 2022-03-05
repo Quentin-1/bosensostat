@@ -1,0 +1,27 @@
+﻿@model SensoStatWeb.WebApplication.ViewModels.SurveysViewModel
+
+<section class="sectionSurveys">
+    <div class="btnNewSurvey">
+        <a asp-controller="survey" asp-action="" class="orangeRoundedButton">Nouvelle Séance</a>
+    </div>
+
+    <h3 class="surveyTitle">Mes séances</h3>
+
+    <div class="surveys">
+
+        @if (Model?.Surveys != null || Model?.Surveys?.Count() < 1)
+        {
+            foreach (var survey in Model.Surveys)
+            {
+                <div class="oneSurvey">
+                    <div><i class="fas fa-circle greyCircle"></i> @survey.Name</div>
+                    <div><a asp-route-surveyId="@survey.Id" asp-controller="survey" asp-action="editPage"><i class="fas fa-edit"></i></a> <a onclick="showPopupDeleteSurvey()"><i class="fas fa-trash-alt"></i></a></div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Aucune séance à afficher</p>
+        }
+    </div>
+</section>

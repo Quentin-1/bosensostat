@@ -1,0 +1,20 @@
+﻿<form enctype="multipart/form-data" method="post" class="sectionLogin" asp-action="createSurvey">
+    <h1 class="Title">Créer une séance</h1>
+    <br />
+
+    <div class="roundedOrangeInput">
+        <i class="fa-solid fa-square-poll-horizontal"></i>
+        <input name="surveyName" type="text" placeholder="Nom de la séance" />
+    </div>
+
+    <div class="roundedOrangeInput">
+        <i class="fa-solid fa-file-csv"></i>
+        <input name="file" type="file" accept=".csv" required/>
+    </div>
+
+
+    <div class="spacedButtons" style="width:100%">
+        <a asp-controller="surveys" asp-action="" style="background-color:transparent;color:#FF9D0A" class="orangeRoundedButton">Retour</a>
+        <input type="submit" class="orangeRoundedButton" value="Créer" />
+    </div>
+</form>

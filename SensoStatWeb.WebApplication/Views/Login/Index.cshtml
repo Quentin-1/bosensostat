@@ -1,0 +1,21 @@
+﻿@model SensoStatWeb.WebApplication.ViewModels.LoginViewModel
+
+<form method="post" asp-action="authenticate" class="sectionLogin">
+    <h1 class="Title">SensoStat - Back office</h1>
+
+    <p class="errorText">@Model?.ErrorMessage</p>
+
+    <span class="errorText" asp-validation-for="Username"></span>
+    <div class="roundedOrangeInput">
+        <i class="fa-solid fa-user"></i>
+        <input asp-for="@Model.Username" placeholder="Nom d'utilisateur" />
+    </div>
+
+    <span class="errorText" asp-validation-for="Password"></span>
+    <div class="roundedOrangeInput">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" asp-for="@Model.Password" placeholder="Mot de passe" />
+    </div>
+
+    <input type="submit" class="orangeRoundedButton" value="Se connecter" />
+</form>

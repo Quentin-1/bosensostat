@@ -1,0 +1,75 @@
+﻿.btnNewSurvey {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 5vh; 
+}
+
+@media screen and (max-width: 400px) {
+    .btnNewSurvey {
+        justify-content: center;
+    }
+}
+
+.surveyTitle {
+    border: 2px solid #FF930C;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+    width: 10vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .surveyTitle {
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .surveyTitle {
+        justify-content: center;
+        width: 25vw;
+    }
+}
+
+.sectionSurveys {
+    height:100%;
+}
+
+.surveys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
+.oneSurvey {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #FF930C;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 2vh;
+    width: 30vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .oneSurvey {
+        width: 60vw;
+    }
+}
+
+.greenCircle {
+  color: limegreen !important;
+}
+
+.blueCircle {
+  color: lightskyblue !important;
+}
+
+.greyCircle {
+  color: grey !important;
+}

@@ -1,0 +1,75 @@
+﻿.surveyCreationDetailParent {
+    width:60%;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+div.titleSurvey h2 {
+    text-align:center;
+}
+
+div.titleSurvey i {
+    color:gray;
+}
+
+.active {
+    background-color: #F5F5F5;
+    transform: scale(1, 1.3);
+    opacity: 0.4;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 300px;
+    max-width: 100%;
+    list-style-type: none;
+}
+
+ul li{
+    width: auto !important;
+    margin-top: 10px;
+    display: flex;
+    cursor: move;
+}
+
+ul li i{
+    margin: auto 20px auto auto;
+    cursor: pointer;
+}
+
+.spacedButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.bigInput {
+    margin:10px 0 0 0 !important;
+}
+
+.surveyButtons {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.surveyButtons button {
+    margin: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    section .surveyCreationDetailParent {
+        width: 100% !important;
+    }
+
+    .spacedButtons {
+        flex-direction:column;
+    }
+
+    .doubleButton {
+        margin-top:10px;
+    }
+}
