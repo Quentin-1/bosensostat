@@ -5,6 +5,7 @@ EXPOSE 80
 EXPOSE 443
 
 FROM alpine:3.14 AS build
+RUN apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib 
 WORKDIR /src
 COPY ["SensoStatWeb.WebApplication/SensoStatWeb.WebApplication.csproj", "SensoStatWeb.WebApplication/"]
 RUN dotnet restore "SensoStatWeb.WebApplication/SensoStatWeb.WebApplication.csproj"
