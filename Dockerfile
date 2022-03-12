@@ -1,11 +1,10 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 FROM mono:3.10-onbuild
+CMD [ "mono",  "./TestingConsoleApp.exe" ]
 
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-
-FROM mono:3.10-onbuild
 
 WORKDIR /src
 COPY ["SensoStatBO/SensoStatBO.csproj", "SensoStatBO/"]
