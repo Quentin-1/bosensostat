@@ -6,7 +6,7 @@ EXPOSE 443
 
 FROM alpine:3.14 AS build
 RUN apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib 
-RUN apk install -y snap 
+RUN apk -y snap 
 RUN snapd && snap install dotnet-sdk --classic --channel=6.0 && snap alias dotnet-sdk.dotnet dotnet
 WORKDIR /src
 COPY ["SensoStatWeb.WebApplication/SensoStatWeb.WebApplication.csproj", "SensoStatWeb.WebApplication/"]
