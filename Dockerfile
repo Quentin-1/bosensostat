@@ -6,17 +6,16 @@ EXPOSE 443
 
 FROM alpine:3.14 AS build
 WORKDIR /src
-COPY ["SensoStatBO/SensoStatBO.csproj", "SensoStatBO/"]
-RUN dotnet restore "SensoStatBO/SensoStatBO.csproj"
+COPY ["SensoStatWeb.WebApplication/SensoStatWeb.WebApplication.csproj", "SensoStatWeb.WebApplication/"]
+RUN dotnet restore "SensoStatWeb.WebApplication/SensoStatWeb.WebApplication.csproj"
 COPY . .
-WORKDIR "/src/SensoStatBO"
-RUN dotnet build "SensoStatBO.csproj" -c Release -o /app/build
+WORKDIR "/src/SensoStatWeb.WebApplication"
+RUN dotnet build "SensoStatWeb.WebApplication.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "SensoStatBO.csproj" -c Release -o /app/publish
+RUN dotnet publish "SensoStatWeb.WebApplication.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SensoStatBO.dll"]
-
+ENTRYPOINT ["dotnet", "SensoStatWeb.WebApplication.dll"]
